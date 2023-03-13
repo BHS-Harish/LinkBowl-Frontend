@@ -1,0 +1,22 @@
+.loader-icon{
+    width: 100px;
+    height: 100px;
+    animation-name: loader-ani;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+}
+@keyframes loader-ani {
+    0%{
+        width: 100px;
+        height: 100px;
+    }
+    50%{
+        width: 70px;
+        height: 70px;
+    }
+    100%{
+        width: 100px;
+        height: 100px;
+    }
+}

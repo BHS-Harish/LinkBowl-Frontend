@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+.client-avatar{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-top: 80px;
+}
+.client-name{
+    margin:20px auto;
+    font-family: 'Itim', sans-serif;
+}
+.client-bio{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    opacity: 0.9;
+    margin: 20px;
+    text-align: center;
+}
+.client-button-container{
+    width:50%;
+    min-height: 55px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin: 13px auto;
+    font-weight: 500;
+    font-size: 17px;
+}
+.floating-footer{
+    width: 50px;
+    height: 35px;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 0px 0px 5px #00000092;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    transition: 1s;
+}
+.floating-footer:hover{
+    width: 280px;
+}
+.floating-footer>img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: auto 10px;
+}
+.floating-footer>a{
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Itim',sans-serif;
+    color:#000AFF;
+}
+.client-share-btn{
+    position: absolute;
+    top:40px;
+    right: 30px;
+}
+@media screen and  (max-width:576px) {
+    .client-avatar{
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        margin-top: 50px;
+    }
+    .client-button-container{
+        width:90%;
+        border-radius: 10px;
+    }
+}
+@media screen and (min-width:577px) and (max-width:991px) {
+    .client-avatar{
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        margin-top: 50px;
+    }
+    .client-button-container{
+        width:70%;
+        border-radius: 10px;
+    }
+}

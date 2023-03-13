@@ -1,38 +1,360 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+*{
+  user-select: none;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar-toggler{
+  outline: none !important;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App-logo{
+  width: 100px;
+  height: 100px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logoTitle{
+  color: #000AFF;
+  font-family: 'Itim', cursive;
+}
+.logoTitle-span{
+  color: #E87A7A;
+}
+.App-primaryBtn{
+  background-color: #000AFF;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:white;
+  padding: 5px 25px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.App-secondaryBtn{
+  background-color: transparent;
+  border: 1px solid #000AFF;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:#000AFF;
+  padding: 5px 25px;
+  margin: 0 5px;
+}
+.App-secondaryBtn:hover{
+  background-color: #000AFF;
+  color: white;
+}
+.App-partOne{
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Itim',cursive;
+  color: #000AFF;
+}
+.App-title1{
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+.App-title2{
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+.App-desc{
+  font-size: 20px;
+}
+.App-getStartedBtn{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  padding: 10px 50px;
+  border-radius: 50px;
+}
+.App-partTwo{
+  width: auto;
+  height: 300px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+.App-partTwo::before{
+  content: " ";
+  width: 100%;
+  height: 300px;
+  background: rgb(0,10,255);
+background: linear-gradient(0deg, rgba(0,10,255,0.25) 0%, rgba(255,255,255,0) 100%);
+  position: absolute;
+  top:0;
+  left: 0;
+}
+.App-illu{
+  width: 350px;
+  height: auto;
+}
+.App-partThree{
+  font-family: 'Itim',cursive;
+  color: #000AFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.App-partThree-sub1{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 40px auto;
+}
+.App-partThree-sub1>div{
+  width: 400px;
+  height: 250px;
+  border: 2px solid #000AFF;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.App-partThree-sub1-logo{
+  background-color:#000AFF;
+  border-radius:10px;
+  width:60px;
+  height:60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App-partThree-sub1-logo>div{
+  font-size: 25px;
+  color: white;
+}
+.App-partThree-sub1>div>p{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  margin: auto 10px;
+  font-size: 20px;
+  color:rgba(0,0,0,0.7);
+}
+.App-partFour>div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App-partFour>div>div:first-child{
+  width: 30%;
+  height: auto;
+}
+.App-partFour>div>div:last-child{
+  width: 70%;
+  height: auto;
+}
+.App-partFour>div>div:last-child>h1{
+  font-family: "Itim",cursive;
+  color:#000AFF;
+  font-weight: 500;
+}
+.App-partFour>div>div:last-child>p{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  color:rgba(0, 0, 0, 0.8);
+  font-weight: 500;
+  width: 70%;
+}
+.App-partFour>div>div:last-child>a{
+  font-family: "Itim",cursive;
+  font-size: 20px;
+  color: #000AFF;
+  font-weight: 500;
+  text-decoration: none;
+  
+}
+.App-marquee-style{
+  font-size: 60px;
+  color: rgba(0, 0, 0, 0.4);
+  margin: 30px auto;
+}
+.App-partFive{
+  width: 100%;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.App-partFive>h1{
+  text-align: center;
+  font-family: 'Itim',cursive;
+  color:#000AFF;
+  margin: 20px auto;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.App-partFive>p{
+  color: rgba(0, 0, 0, 0.7);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+}
+.footer{
+  background: rgb(0,10,255);
+  background: linear-gradient(0deg, rgba(0,10,255,0.2) 0%, rgba(255,255,255,0) 100%);
+}
+.footer-container{
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: space-around;
+}
+.footer>p{
+  font-family: 'Itim',cursive;
+  color:#000AFF;
+  margin: 0;
+  position: relative;
+  bottom: 10px;
+  text-align: center;
+}
+.footer>p>a{
+  text-decoration: none;
+}
+.footer-container>div{
+  width: 25%;
+  height: 100%;
+  /* background-color: #e87a7a3c; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.App-social-links{
+  font-size: 20px;
+  color: #000AFF; 
+}
+.footer-container-sub1>div>a{
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;  
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 7px;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.5);
+}
+.footer-container-sub2,.footer-container-sub3{
+  font-family: 'Itim',cursive;
+  color: #000AFF;
+}
+.footer-container-sub3>form>input{
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 2px solid #E87A7A;
+  width: 100%;
+}
+.footer-container-sub3>form>input:focus{
+  border: 2px solid #E87A7A;
+  outline: none;
+  color: #000AFF;
+}
+@media  screen and (max-width:991px) {
+  .App-logo{
+    width: 60px;
+    height: 60px;
   }
-  to {
-    transform: rotate(360deg);
+  .App-title1{
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  .App-title2{
+    font-size: 25px;
+    margin-bottom: 5px;
+  }
+  .App-desc{
+    font-size: 15px;
+  }
+  .App-getStartedBtn{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    padding: 8px 30px;
+    font-size: 13px;
+  }
+  .App-partTwo{
+    height: 250px;
+  }
+  .App-partTwo::before{
+    height: 250px;
+  }
+  .App-illu{
+    width: 300px;
+    height: auto;
+  }
+  .App-illu:last-child{
+    display: none;
+  }
+  .App-partThree-sub1{
+    flex-direction: column;
+  }
+  .App-partThree-sub1{
+    margin: 20px auto;
+  }
+  .App-partThree-sub1>div{
+    width: 320px;
+    height: 230px;
+    margin: 10px auto;
+  }
+  .App-partThree-sub1-logo{
+    width:50px;
+    height:50px;
+  }
+  .App-partThree-sub1-logo>div{
+    font-size: 20px;
+    color: white;
+  }
+  .App-partThree-sub1>div>p{
+    font-size: 15px;
+  }
+  .App-partFour>div{
+    flex-direction: column-reverse;
+  }
+  .App-partFour>div>div:first-child{
+    width: 90%;
+    height: auto;
+    margin: 10px;
+  }
+  .App-partFour>div>div:last-child{
+    width: 90%;
+    height: auto;
+    margin: 40px;
+  }
+  .App-partFour>div>div:last-child>h1{
+    font-family: "Itim",cursive;
+    color:#000AFF;
+    font-weight: 500;
+  }
+  .App-partFour>div>div:last-child>p{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    color:rgba(0, 0, 0, 0.6);
+    font-weight: 500;
+    width: 100%;
+  }
+  .App-partFour>div>div:last-child>a{
+    font-family: "Itim",cursive;
+    font-size: 20px;
+    color: #000AFF;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .App-marquee-style{
+    font-size: 40px;
+    color: rgba(0, 0, 0, 0.4);
+    margin: 30px 10px;
+  }
+  .App-partFive>p{
+    font-size: 15px;
+  }
+  .footer-container{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .footer-container>div{
+    width: 90%;
+    height: 200px;
+    /* background-color: #e87a7a3c; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .footer-container>p{
+    bottom: -8px;
   }
 }
