@@ -22,7 +22,7 @@ import axios from 'axios';
 export const getUserData=()=>async (dispatch)=>{
     try {
         dispatch(userDataRequest());
-        const {data}=await axios.get('http://localhost:8000/api/v1/getUserDetails',{withCredentials:true});
+        const {data}=await axios.get('https://cdn-linkbowl.onrender.com/api/v1/getUserDetails',{withCredentials:true});
         dispatch(userDataSuccess(data))
     } catch (error) {
         dispatch(userDataFail())
@@ -32,7 +32,7 @@ export const editUserLink=(data)=>async(dispatch)=>{
     try{
         dispatch(updateLinkRequest());
         console.log(data)
-        await axios.put('http://localhost:8000/api/v1/editUserLink',{
+        await axios.put('https://cdn-linkbowl.onrender.com/api/v1/editUserLink',{
             links:data
         },{withCredentials:true}).then((response)=>{
             dispatch(updateLinkSuccess(response.data));
@@ -45,7 +45,7 @@ export const editUserAvatar=(data)=>async (dispatch)=>{
     try{
         dispatch(updateAvatarRequest());
         console.log(data);
-        await axios.put('http://localhost:8000/api/v1/editUserAvatar',{
+        await axios.put('https://cdn-linkbowl.onrender.com/api/v1/editUserAvatar',{
             avatar:data
         },{withCredentials:true}).then((response)=>{
             dispatch(updateAvatarSuccess(response.data))
@@ -58,7 +58,7 @@ export const editUserAvatar=(data)=>async (dispatch)=>{
 export const editUserName=(data)=>async (dispatch)=>{
     try {
         dispatch(updateNameRequest());
-        await axios.put('http://localhost:8000/api/v1/editUserName',{
+        await axios.put('https://cdn-linkbowl.onrender.com/api/v1/editUserName',{
             name:data
         },{withCredentials:true}).then((response)=>{
             dispatch(updateNameSuccess(response.data))
@@ -70,7 +70,7 @@ export const editUserName=(data)=>async (dispatch)=>{
 export const editUserBio=(data)=>async (dispatch)=>{
     try {
         dispatch(updateBioRequest());
-        await axios.put('http://localhost:8000/api/v1/editUserBio',{
+        await axios.put('https://cdn-linkbowl.onrender.com/api/v1/editUserBio',{
             bio:data
         },{withCredentials:true}).then((response)=>{
             dispatch(updateBioSuccess(response.data))
@@ -82,7 +82,7 @@ export const editUserBio=(data)=>async (dispatch)=>{
 export const editUserTheme=(data)=>async (dispatch)=>{
     try {
         dispatch(updateThemeRequest());
-        await axios.put('http://localhost:8000/api/v1/editUserTheme',{
+        await axios.put('https://cdn-linkbowl.onrender.com/api/v1/editUserTheme',{
             theme:data
         },{withCredentials:true}).then((response)=>{
             dispatch(updateThemeSuccess(response.data))

@@ -23,7 +23,7 @@ function SignUp() {
     const [isVerifiedPassword, setIsVerifiedPassword] = useState(false);
     //To check the Username
     async function checkUserNameFunc() {
-        await axios.post('http://localhost:8000/api/v1/checkUserName', {
+        await axios.post('https://cdn-linkbowl.onrender.com/api/v1/checkUserName', {
             username
         }).then(response => {
             setUsernameError("");
@@ -36,7 +36,7 @@ function SignUp() {
 
     //To check the email
     async function checkEmailIdFunc() {
-        await axios.post('http://localhost:8000/api/v1/checkEmailId', {
+        await axios.post('https://cdn-linkbowl.onrender.com/api/v1/checkEmailId', {
             emailId: email
         }).then(response => {
             setEmailError("");
@@ -75,7 +75,7 @@ function SignUp() {
     //Submit Function
     async function handleSubmit() {
         setBackDrop(true);
-        await axios.post('http://localhost:8000/api/v1/register', {
+        await axios.post('https://cdn-linkbowl.onrender.com/api/v1/register', {
             username,
             email,
             name: username,

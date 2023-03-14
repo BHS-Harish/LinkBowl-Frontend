@@ -35,7 +35,7 @@ function User() {
 
     const handleShareButton = async () => {
         if (navigator.share) {
-            const shareDetails = { url: `http://localhost:3000/${username}`, title: `${username} is on LinkBowl`, text: "Please Visit the LinkBowl Profile" };
+            const shareDetails = { url: `https://linkbowl.netlify.app/${username}`, title: `${username} is on LinkBowl`, text: "Please Visit the LinkBowl Profile" };
             await navigator.share(shareDetails);
         }
         else {
@@ -46,7 +46,7 @@ function User() {
         return (
             <div className='d-flex flex-column' style={{ width: "200px" }}>
                 <button className="sub-menu-items" onClick={handleShareButton}>Share via link</button>
-                <Popover placement="bottom" content={<div id="myqrcode"><QRCode value={username ? `http://localhost:3000/${username}` : "http://localhost:3000"} bordered={false} style={{ backgroundColor: "white" }} /></div>} trigger="hover">
+                <Popover placement="bottom" content={<div id="myqrcode"><QRCode value={username ? `https://linkbowl.netlify.app/${username}` : "https://linkbowl.netlify.app"} bordered={false} style={{ backgroundColor: "white" }} /></div>} trigger="hover">
                     <button className="sub-menu-items" onDoubleClick={downloadQRCode}>Download QR Code</button>
                 </Popover>
             </div>

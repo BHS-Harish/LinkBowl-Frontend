@@ -20,7 +20,7 @@ function Auth() {
         },2000)
     },[])
     async function verifyUserFunc(){
-        axios.post('http://localhost:8000/api/v1/auth',{
+        axios.post('https://cdn-linkbowl.onrender.com/api/v1/auth',{
             token:token
         },{withCredentials:true}).then(res=>{
             setIsVerified(res.data.success);

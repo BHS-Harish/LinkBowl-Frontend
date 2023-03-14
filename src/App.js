@@ -30,7 +30,7 @@ function App() {
                 <Route path='/register' element={<SignUp />} />
                 <Route path='/login' element={<SignIn />} />
                 <Route path='/auth/:token' element={<Auth />} />
-                <Route path='/admin/*' element={<AdminMain />} />
+                <Route path='/admin/*' element={<ProtectedRoute><AdminMain /></ProtectedRoute>}/>
                 <Route path='/*' element={<ErrorPage />} />
               </Routes>
             </div>

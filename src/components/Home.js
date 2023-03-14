@@ -171,7 +171,6 @@ function Home() {
             </form>
         </div>
         </div>
-        <p>Made by BHS & Alex</p>
       </Container>
     </>
     </Fade>

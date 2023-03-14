@@ -10,7 +10,7 @@ import { userDataFail } from '../slices/userSlice';
 export const checkAuthenticated=()=>async (dispatch)=>{
     try{
         dispatch(authenticateRequest())
-        const {data}=await axios.get('http://localhost:8000/api/v1/checkLoggedInorNot',{withCredentials:true});
+        const {data}=await axios.get('https://cdn-linkbowl.onrender.com/api/v1/checkLoggedInorNot',{withCredentials:true});
         dispatch(authenticateSuccess(data))
     }
     catch(err){
@@ -19,7 +19,7 @@ export const checkAuthenticated=()=>async (dispatch)=>{
 }
 export const logoutUser=()=>async (dispatch)=>{
     try {
-        await axios.get('http://localhost:8000/api/v1/logout',{withCredentials:true})
+        await axios.get('https://cdn-linkbowl.onrender.com/api/v1/logout',{withCredentials:true})
         dispatch(logoutUserSuccess())
         window.open(`http://localhost:3000/login`, '_self');
         dispatch(userDataFail())
