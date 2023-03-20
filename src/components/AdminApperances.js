@@ -75,7 +75,7 @@ function AdminApperances() {
                             uploadImage(e);
                         }} className="adminappear-pick-image" />
                         <button onClick={() => {
-                            dispatch(editUserAvatar(undefined))
+                            dispatch(editUserAvatar(""))
                         }} style={{ backgroundColor: "#E87A7A" }}>REMOVE IMAGE</button>
                     </div>
                 </div>

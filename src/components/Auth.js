@@ -1,36 +1,26 @@
-import React, { useEffect, useState } from 'react';
+import React, {  useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Container, Navbar,Button } from 'react-bootstrap';
 import { Helmet } from 'react-helmet-async';
 import { LinearProgress, Box } from '@mui/material';
 import logo from '../asset/lb-png.png';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import {useSelector,useDispatch} from 'react-redux';
+import {verifyUserFunc} from '../redux/actions/clientActions';
 
 function Auth() {
 
-    const [isVerified, setIsVerified] = useState(false);
-    const[userFound,setUserFound]=useState(false);
-    const [showMessage, setShowMessage] = useState("Verification in Progress...");
-    const navigate=useNavigate();
+    const isVerified=useSelector((state)=>state.client.isVerified);
+    const userFound=useSelector((state)=>state.client.userFound);
+    const showMessage=useSelector((state)=>state.client.showMessage);
+    const navigate = useNavigate();
     const { token } = useParams();
+    const dispatch=useDispatch();
     useEffect(()=>{
-        setTimeout(()=>{
-            verifyUserFunc();
-        },2000)
+        return ()=>{
+            dispatch(verifyUserFunc(token));
+        }
     },[])
-    async function verifyUserFunc(){
-        axios.post('https://cdn-linkbowl.onrender.com/api/v1/auth',{
-            token:token
-        },{withCredentials:true}).then(res=>{
-            setIsVerified(res.data.success);
-            setShowMessage(res.data.message);
-        }).catch(err=>{
-            // console.log(err);
-            setUserFound(!err.response.data.success);
-            setShowMessage(err.response.data.message);
-        })
-    }
     return (
         <>
             <Helmet>
@@ -53,7 +43,7 @@ function Auth() {
                 <h3 style={{ color: "#000AFF", textAlign: "center" ,margin:"20px 10px"}}>{showMessage}</h3>
                 {!isVerified ?
                     <Box sx={{ width: '80vw' }}>
-                        <LinearProgress />
+                        <LinearProgress />    
                     </Box> :
                     <Button variant='primary' className="App-primaryBtn" style={{fontWeight:"700",padding:"10px 20px"}} onClick={()=>{
                         navigate('/login');

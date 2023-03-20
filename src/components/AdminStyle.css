@@ -251,6 +251,13 @@
 .adminprofile-delete-account-container>button:hover{
     background-color: #b5aaaa;
 }
+.css-uhb5lp{
+    padding: 30px 15px !important;
+}
+.css-177ic5c{
+    width: 50% !important;
+    padding: 20px !important;
+}
 @media screen and  (max-width:576px) {
     .adminlink-new-link-container{
         width:90%;
@@ -282,6 +289,10 @@
         justify-content: space-evenly;
         align-items: center;
     }
+    .css-177ic5c{
+        width: 90% !important;
+        padding: 20px !important;
+    }
 }
 @media screen and (min-width:577px) and (max-width:991px) {
     .adminlink-new-link-container{
@@ -306,5 +317,9 @@
         margin: 30px auto;
         border-radius: 5px;
         padding: 15px;
+    }
+    .css-177ic5c{
+        width: 70% !important;
+        padding: 20px !important;
     }
 }

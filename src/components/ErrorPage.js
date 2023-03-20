@@ -24,7 +24,7 @@ function ErrorPage() {
                 </Container>
             </Navbar>
             <div className="d-flex align-items-center justify-content-center vh-80">
-            <div className="text-center">
+            <div className="text-center" style={{padding:"15px"}}>
                 <h1 className="display-1 fw-bold" style={{color:"#000AFF"}}>404</h1>
                 <p className="fs-3"> <span className="text-danger">Opps!</span> Page not found.</p>
                 <p className="lead">

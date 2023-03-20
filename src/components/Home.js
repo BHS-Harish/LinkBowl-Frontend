@@ -1,7 +1,8 @@
-import React from 'react';
+import React,{useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import { Container, Row, Col } from 'react-bootstrap';
+import {message} from 'antd';
 import { useNavigate } from 'react-router';
 import Navbar from 'react-bootstrap/Navbar';
 import Marquee from 'react-fast-marquee';
@@ -19,8 +20,19 @@ import{RiTelegramFill,RiWhatsappFill,RiSnapchatFill,RiDriveFill,RiInstagramFill,
 import leftIllu from '../asset/left-illu.png';
 import rightIllu from '../asset/right-illu.png';
 import mockup from '../asset/mockup.png';
+import axios from 'axios';
 function Home() {
   const navigate=useNavigate();
+  const [email, setEmail] = useState("");
+  async function handleSubscribe() {
+    await axios.post('https://cdn-linkbowl.onrender.com/api/v1/subscribe', {
+      "email":email
+    }, { withCredentials: true }).then(response => {
+      message.success("Subscribed Successfully")
+    }).catch(err => {
+      message.error("Subscription Failed")
+    })
+  }
   return (
     <Fade delay={1000} duration={2000}>
     <>
@@ -153,22 +165,28 @@ function Home() {
             <img src={logo} className="App-logo" alt="logo"/>
             <h2 className="d-inline-block align-center logoTitle"><span className='logoTitle-span'>Link</span>Bowl</h2>
             <div className='d-flex justif-content-around align-item-center' style={{width:"100%"}}>
-                <a href="#home"><RiInstagramFill className='App-social-links'/></a>
-                <a href="#home"><RiFacebookBoxFill className='App-social-links'/></a>
-                <a href="#home"><RiYoutubeFill className='App-social-links'/></a>
+                <a href="https://www.instagram.com/linkbowl.care"><RiInstagramFill className='App-social-links'/></a>
+                <a href="https://www.facebook.com/profile.php?id=100090015964557"><RiFacebookBoxFill className='App-social-links'/></a>
+                <a href="https://www.youtube.com/@linkbowl"><RiYoutubeFill className='App-social-links'/></a>
             </div>
         </div>
         <div className="footer-container-sub2">
             <h4>Contact Us</h4>
-            <a href='#home' style={{textDecoration:"none",color:"rgba(0, 0, 0, 0.7)",fontSize:"15px",margin:"5px"}}><MdMail style={{fontSize:"20px",color:"#E87A7A"}}/> linkbowl.care@gmail.com</a>
-            <a href='#home' style={{textDecoration:"none",color:"rgba(0, 0, 0, 0.7)",fontSize:"15px",margin:"5px"}}><MdLocationPin style={{fontSize:"20px",color:"#E87A7A"}}/> Department of BCA,C Block, Anja College Campus, Sivakasi-626-124, India</a>
+            <a href='mailto:linkbowl.care@gmail.com' style={{textDecoration:"none",color:"rgba(0, 0, 0, 0.7)",fontSize:"15px",margin:"5px"}}><MdMail style={{fontSize:"20px",color:"#E87A7A"}}/> linkbowl.care@gmail.com</a>
+            <a href='https://goo.gl/maps/riAhhB8acUnZGhaz8' style={{textDecoration:"none",color:"rgba(0, 0, 0, 0.7)",fontSize:"15px",margin:"5px"}}><MdLocationPin style={{fontSize:"20px",color:"#E87A7A"}}/> Department of BCA,C Block, Anja College Campus, Sivakasi-626-124, India</a>
         </div>
         <div className="footer-container-sub3">
             <h4>Subscribe Now</h4>
-            <form method='post'>
-            <input type="email" placeholder='Enter your email here' required/>
-            <button style={{padding:"5px 20px",backgroundColor:"#E87A7A",color:"white",borderRadius:"50px",margin:"10px",border:"none",float:"right"}}>Subscribe</button>
-            </form>
+            <form onSubmit={async(e)=>{
+                e.preventDefault();
+                await handleSubscribe();
+                setEmail('');
+              }} >
+                <input type="email" placeholder='Enter your email here' onChange={(e) => {
+                  setEmail(e.target.value)
+                }} value={email} required />
+                <button style={{ padding: "5px 20px", backgroundColor: "#E87A7A", color: "white", borderRadius: "50px", margin: "10px", border: "none", float: "right" }} type="submit">Subscribe</button>
+              </form>
         </div>
         </div>
       </Container>

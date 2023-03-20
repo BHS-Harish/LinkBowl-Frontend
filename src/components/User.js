@@ -8,6 +8,7 @@ import Loader from './Loader';
 import { Container } from 'react-bootstrap';
 import { Popover, QRCode } from 'antd';
 import {RiShareForwardFill} from 'react-icons/ri';
+import {MdEmail} from 'react-icons/md';
 import logo from '../asset/lb-png.png';
 import './ClientStyle.css';
 import './AdminStyle.css';
@@ -58,18 +59,19 @@ function User() {
                 <Loader />
                 :
                 !client ?
-                    <ErrorPage />
+                    <ErrorPage/>
                     :
                     <>
                         <Helmet>
                             <title>{username} | LinkBowl</title>
-                            <meta name="theme-color" content={client?.theme.bgColor} />
+                            <meta name="theme-color" content={`${client.theme.bgColor}`} />
                         </Helmet>
-                        <Container fluid className='vw-100  d-flex flex-column align-items-center' style={{ backgroundColor: `${client?.theme.bgColor}`,paddingBottom:"30px"}}>
+                        <Container fluid className='vw-100  d-flex flex-column align-items-center' style={{ backgroundColor: `${client?.theme.bgColor}`,paddingBottom:"30px",minHeight:"100vh"}}>
                             <img className="client-avatar" src={client?.avatar ? client.avatar : `https://avatar.oxro.io/avatar.svg?name=${client.name}&background=${(client.theme.color).slice(1, 7)}&color=${(client.theme.bgColor).slice(1, 7)}&caps=3&bold=true`} alt='avatar' />
                             <h2 className="client-name" style={{ color: `${client?.theme.color}` }}>{client?.name}</h2>
                             <p className="client-bio" style={{ color: `${client?.theme.color}` }}>{client?.bio}</p>
-                            {
+                            <a href={"mailto:"+client?.email} style={{margin:"10px"}}> <MdEmail style={{color:`${client?.theme.color}`,fontSize:"25px"}}/></a>
+		{
                                 client?.links && client.links.map((data, index) => {
                                     return (
                                         <div className="client-button-container d-flex justify-content-center align-items-center" style={{backgroundColor:`${client?.theme.btnBgColor}`,boxShadow:`1px 1px 5px ${client?.theme.btnShadowColor}`,color:`${client?.theme.btnColor}`}} onClick={()=>{

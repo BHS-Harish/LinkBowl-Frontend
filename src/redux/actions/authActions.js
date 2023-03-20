@@ -21,9 +21,19 @@ export const logoutUser=()=>async (dispatch)=>{
     try {
         await axios.get('https://cdn-linkbowl.onrender.com/api/v1/logout',{withCredentials:true})
         dispatch(logoutUserSuccess())
-        window.open(`http://localhost:3000/login`, '_self');
         dispatch(userDataFail())
+        dispatch(authenticateFail());
     } catch (error) {
         dispatch(logoutUserFail())
+    }
+}
+export const deleteMyAccount=()=>async (dispatch)=>{
+    try {
+        await axios.get('https://cdn-linkbowl.onrender.com/api/v1/deleteaccount',{withCredentials:true})
+        dispatch(logoutUserSuccess())
+        dispatch(userDataFail())
+        dispatch(authenticateFail());
+    } catch (error) {
+        
     }
 }

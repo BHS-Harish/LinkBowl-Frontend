@@ -3,7 +3,8 @@ import './AdminStyle.css';
 import { Container } from 'react-bootstrap';
 import { TextField } from '@mui/material';
 import { Modal } from 'antd';
-import { useSelector } from 'react-redux';
+import { useSelector,useDispatch } from 'react-redux';
+import {deleteMyAccount} from '../redux/actions/authActions';
 import deleteImg from '../asset/deleteacc.svg';
 function AdminProfile() {
     const avatar = useSelector((state) => state.user.user?.avatar);
@@ -11,7 +12,7 @@ function AdminProfile() {
     const username = useSelector((state) => state.user.user?.username);
     const email = useSelector((state) => state.user.user?.email);
     const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
-
+    const dispatch=useDispatch();
     return (
         <>
             <Container fluid className="vw-100 d-flex flex-column align-items-center">
@@ -33,7 +34,7 @@ function AdminProfile() {
             <Modal open={isDeleteModalOpen} onCancel={()=>{
                 setIsDeleteModalOpen(false);
             }} onOk={()=>{
-                alert("Account Deleted")
+                dispatch(deleteMyAccount());
                 setIsDeleteModalOpen(false);
             }}>
                     <p style={{fontSize:"20px",color:"#000AFF",fontWeight:"600",margin:"10px auto"}}>Really want to leave from LinkBowl..?</p>
