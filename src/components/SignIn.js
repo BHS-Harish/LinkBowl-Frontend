@@ -60,6 +60,7 @@ function SignIn() {
                                 setPassword(e.target.value);
                             }} />
                             <Button variant="primary" className="App-primaryBtn login-btn" type='submit' onClick={handleSubmit}>SIGN IN</Button>
+                            <p className='logoTitle-span' style={{ fontFamily: "Itim,cursive", fontSize: "16px", textAlign: "center",margin:"5px" }}><a href="/request-reset-password" className="logoTitle" style={{ textDecoration: "none" }}>Forgot Password..?</a></p>
                             <p className='logoTitle-span' style={{ fontFamily: "Itim,cursive", fontSize: "16px", textAlign: "center" }}>Do you haven't an account..? <a href="/register" className="logoTitle" style={{ textDecoration: "none" }}>Sign Up</a></p>
                         </Box>
                     </Col>

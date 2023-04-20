@@ -9,7 +9,6 @@ import {useSelector,useDispatch} from 'react-redux';
 import {verifyUserFunc} from '../redux/actions/clientActions';
 
 function Auth() {
-
     const isVerified=useSelector((state)=>state.client.isVerified);
     const userFound=useSelector((state)=>state.client.userFound);
     const showMessage=useSelector((state)=>state.client.showMessage);
@@ -17,10 +16,9 @@ function Auth() {
     const { token } = useParams();
     const dispatch=useDispatch();
     useEffect(()=>{
-        return ()=>{
-            dispatch(verifyUserFunc(token));
-        }
-    },[])
+        console.log("UseEffect");
+        dispatch(verifyUserFunc(token));
+    },[dispatch,token]);
     return (
         <>
             <Helmet>

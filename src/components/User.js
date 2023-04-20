@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useParams } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
-import { clientDataFetch } from '../redux/actions/clientActions';
+import { clientDataFetch,addViews,addClicks } from '../redux/actions/clientActions';
 import ErrorPage from './ErrorPage';
 import Loader from './Loader';
 import { Container } from 'react-bootstrap';
@@ -33,6 +33,10 @@ function User() {
         dispatch(clientDataFetch(username))
         // eslint-disable-next-line
     }, [dispatch])
+    useEffect(()=>{
+        if(!loading)
+            dispatch(addViews(client?.id))
+    },[loading])
 
     const handleShareButton = async () => {
         if (navigator.share) {
@@ -75,6 +79,7 @@ function User() {
                                 client?.links && client.links.map((data, index) => {
                                     return (
                                         <div className="client-button-container d-flex justify-content-center align-items-center" style={{backgroundColor:`${client?.theme.btnBgColor}`,boxShadow:`1px 1px 5px ${client?.theme.btnShadowColor}`,color:`${client?.theme.btnColor}`}} onClick={()=>{
+                                            dispatch(addClicks(client.id));
                                             window.open(data.url)
                                         }}>
                                             {data?.title}

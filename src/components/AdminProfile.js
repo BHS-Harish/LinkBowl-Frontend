@@ -4,6 +4,7 @@ import { Container } from 'react-bootstrap';
 import { TextField } from '@mui/material';
 import { Modal } from 'antd';
 import { useSelector,useDispatch } from 'react-redux';
+import {useNavigate} from 'react-router-dom';
 import {deleteMyAccount} from '../redux/actions/authActions';
 import deleteImg from '../asset/deleteacc.svg';
 function AdminProfile() {
@@ -13,6 +14,7 @@ function AdminProfile() {
     const email = useSelector((state) => state.user.user?.email);
     const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
     const dispatch=useDispatch();
+    const navigate=useNavigate();
     return (
         <>
             <Container fluid className="vw-100 d-flex flex-column align-items-center">
@@ -23,6 +25,12 @@ function AdminProfile() {
                     </div>
                     <TextField className="login-field" label="Username" fullWidth value={username} readOnly={true} />
                     <TextField className="login-field" label="Email" fullWidth value={email} readOnly={true} />
+                </div>
+                <div className="adminprofile-containers adminprofile-delete-account-container">
+                    <h3>Reset Password</h3>
+                    <button onClick={()=>{
+                        navigate(`/request-reset-password?email=${email}`);
+                    }}>Change Password</button>
                 </div>
                 <div className="adminprofile-containers adminprofile-delete-account-container">
                     <h3>Danger Zone</h3>

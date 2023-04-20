@@ -1,78 +1,92 @@
 @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
-.adminlink-new-link-container{
-    width:50%;
+
+.adminlink-new-link-container {
+    width: 50%;
     margin: 50px;
 }
-.adminlink-add-new-link-btn{
+
+.adminlink-add-new-link-btn {
     width: 100%;
     background-color: #000AFF;
-    color:white;
+    color: white;
     border: none;
     border-radius: 20px;
     height: 45px;
     font-weight: 700;
 }
-.adminlink-add-new-link-btn:hover{
+
+.adminlink-add-new-link-btn:hover {
     background-color: #040bd7;
 }
-.adminlink-add-new-link-btn>svg>path{
+
+.adminlink-add-new-link-btn>svg>path {
     stroke: #fff;
     stroke-width: "3";
 }
+
 .css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper {
-    width:50% !important;
-    padding:20px !important;
-}
-.css-1t1j96h-MuiPaper-root-MuiDialog-paper{
-    width:50% !important;
+    width: 50% !important;
     padding: 20px !important;
 }
-.adminlinkform-btn{
+
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+    width: 50% !important;
+    padding: 20px !important;
+}
+
+.adminlinkform-btn {
     padding: 5px 20px;
     background-color: #000AFF;
     display: inline;
     border: none;
-    color:#fff;
+    color: #fff;
     font-weight: 500;
     border-radius: 5px;
     margin: auto 10px;
     cursor: pointer;
     float: right;
 }
-.adminlink-add-btn:disabled{
+
+.adminlink-add-btn:disabled {
     background-color: #0008ff7d;
-    color:#fcfcfc;
+    color: #fcfcfc;
     cursor: not-allowed;
 }
-.adminlink-reset-btn{
+
+.adminlink-reset-btn {
     background-color: white;
-    color:#000AFF;
+    color: #000AFF;
     border: 1px solid #000AFF;
 }
-.adminlink-lists-container{
-    width:50%;
+
+.adminlink-lists-container {
+    width: 50%;
     margin: 30px !important;
 }
-.adminlink-list-container{
-    width:100%;
+
+.adminlink-list-container {
+    width: 100%;
     background-color: #0008ff10;
     margin: 15px auto;
     border-radius: 10px;
     padding: 15px 20px;
     position: relative;
 }
-.adminlink-list-container>h6{
-    color:#000AFF;
+
+.adminlink-list-container>h6 {
+    color: #000AFF;
     margin: 10px;
-    width:75%;
-    height:25px;
+    width: 75%;
+    height: 25px;
 }
-.adminlink-list-container>p{
-    color:rgba(0,0,0,0.5);
+
+.adminlink-list-container>p {
+    color: rgba(0, 0, 0, 0.5);
     margin: 10px;
-    width:80%;
+    width: 80%;
 }
-.adminlink-list-switch-container{
+
+.adminlink-list-switch-container {
     width: 30%;
     height: 40px;
     background-color: white;
@@ -82,25 +96,29 @@
     justify-content: space-around;
     align-items: center;
 }
-.adminlink-list-switch-container>p{
-    color:#000AFF;
+
+.adminlink-list-switch-container>p {
+    color: #000AFF;
     font-weight: 500;
     margin: 0;
 }
-:where(.css-dev-only-do-not-override-1n7nwfa).ant-switch.ant-switch-checked{
+
+:where(.css-dev-only-do-not-override-1n7nwfa).ant-switch.ant-switch-checked {
     background-color: #E87A7A !important;
 }
-.adminlink-link-action-btn-container{
+
+.adminlink-link-action-btn-container {
     position: absolute;
     right: 8px;
-    top:25%;
+    top: 25%;
 }
-.adminlink-link-action-btn{
+
+.adminlink-link-action-btn {
     border: none;
     margin: 5px;
     background-color: #000AFF;
     border-radius: 5px;
-    width:30px;
+    width: 30px;
     height: 30px;
     color: #fff;
     font-size: 20px;
@@ -108,8 +126,10 @@
     justify-content: center;
     align-items: center;
 }
-.adminappear-containers,.adminprofile-containers{
-    width:50%;
+
+.adminappear-containers,
+.adminprofile-containers {
+    width: 50%;
     margin: 50px;
     border-radius: 10px;
     background-color: white;
@@ -118,23 +138,28 @@
     flex-direction: column;
     padding: 30px;
 }
-.adminappear-containers>h3,.adminprofile-containers>h3{
+
+.adminappear-containers>h3,
+.adminprofile-containers>h3 {
     font-family: 'Itim', cursive;
-    color:#000AFF;
+    color: #000AFF;
 }
-.adminappear-profile-pic-container{
+
+.adminappear-profile-pic-container {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
-.adminappear-profile-pic-container>img{
+
+.adminappear-profile-pic-container>img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     margin: 20px;
 }
-.adminappear-profile-pic-container>div>button{
+
+.adminappear-profile-pic-container>div>button {
     background-color: #000AFF;
     color: white;
     font-weight: 700;
@@ -144,80 +169,95 @@
     border: none;
     border-radius: 10px;
     margin: 10px;
-}.adminappear-pick-image::-webkit-file-upload-button{
+}
+
+.adminappear-pick-image::-webkit-file-upload-button {
     visibility: hidden;
 }
-.adminappear-profile-pic-container>div{
+
+.adminappear-profile-pic-container>div {
     width: 200px;
 }
-.adminappear-pick-image{
+
+.adminappear-pick-image {
     transform: translateX(37px);
-    color:transparent;
+    color: transparent;
     height: 70px;
 }
-.adminappear-pick-image::before{
-  content: 'PICK AN IMAGE';
-  display: inline-block;
-  background-color: #000AFF;
-  border-radius: 10px;
-  width: 200px;
-  height: 50px;
-  outline: none;
-  white-space: nowrap;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  color: white;
-  font-weight: 700;
-  margin: 10px;
-  font-size: 16px;
+
+.adminappear-pick-image::before {
+    content: 'PICK AN IMAGE';
+    display: inline-block;
+    background-color: #000AFF;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    outline: none;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    margin: 10px;
+    font-size: 16px;
 }
-.adminappear-profile-container>form{
+
+.adminappear-profile-container>form {
     position: relative;
     margin: 10px auto;
     width: 100%;
 }
-.adminappear-name-btn-container{
+
+.adminappear-name-btn-container {
     float: right;
 }
-.adminappear-name-btn-container>button{
+
+.adminappear-name-btn-container>button {
     margin: 5px;
     font-size: 12px !important;
     font-weight: 500 !important;
 }
-.adminappear-color-container{
+
+.adminappear-color-container {
     margin: 20px auto;
     width: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.adminappear-color-container>p{
+
+.adminappear-color-container>p {
     font-weight: 700;
     font-size: 15px;
 }
-.adminappear-color-picker-container{
+
+.adminappear-color-picker-container {
     width: 100%;
     display: flex;
     align-items: center;
     height: 50px;
 }
-.adminappear-color-picker{
-	border: none;
-	width: 50px;
-	height: 50px;
+
+.adminappear-color-picker {
+    border: none;
+    width: 50px;
+    height: 50px;
     background-color: transparent
 }
+
 .adminappear-color-picker::-webkit-color-swatch-wrapper {
-	padding: 0;
+    padding: 0;
     border: none;
 }
+
 .adminappear-color-picker::-webkit-color-swatch {
-	border: 2px solid rgba(0, 0, 0, 0.279);
+    border: 2px solid rgba(0, 0, 0, 0.279);
     border-radius: 5px;
 }
-.adminappear-color-picker-container>p{
+
+.adminappear-color-picker-container>p {
     height: 90%;
-    width:180px;
+    width: 180px;
     background-color: #0008ff1d;
     border-radius: 5px;
     display: flex;
@@ -227,99 +267,212 @@
     font-weight: 700;
     font-size: 15px;
 }
-.adminprofile-image-container{
+
+.adminprofile-image-container {
     width: 100%;
     display: flex;
     justify-content: center;
 }
-.adminprofile-image-container>img{
+
+.adminprofile-image-container>img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     margin: 20px;
 }
-.adminprofile-delete-account-container>button{
+
+.adminprofile-delete-account-container>button {
     width: 100%;
     margin: 20px auto;
     height: 50px;
     background-color: #E87A7A;
     border: none;
-    color:white;
+    color: white;
     border-radius: 5px;
     font-weight: 600;
 }
-.adminprofile-delete-account-container>button:hover{
+
+.adminprofile-delete-account-container>button:hover {
     background-color: #b5aaaa;
 }
-.css-uhb5lp{
+
+.css-uhb5lp {
     padding: 30px 15px !important;
 }
-.css-177ic5c{
+
+.css-177ic5c {
     width: 50% !important;
     padding: 20px !important;
 }
-@media screen and  (max-width:576px) {
-    .adminlink-new-link-container{
-        width:90%;
+
+.admininsight-container {
+    width: 100%;
+    height: 300px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.admininsight-container-subpart {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.admininsight-container-subpart>h5 {
+    font-weight: 700;
+    color: #000AFF;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.admininsight-container-subpart>p {
+    font-size: 40px;
+    font-weight: 700;
+    background: linear-gradient(90.65deg, #000AFF 0.68%, #E87A7A 86.26%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.admininsight-container>div:nth-child(2)>h2 {
+    color: #000AFF;
+    font-weight: 700;
+    transform: translateY(-30px);
+}
+
+.admininsight-container>div:nth-child(2)>h6 {
+    color: #E87A7A;
+    font-size: 15px;
+    font-weight: 500;
+    transform: translateY(-30px);
+}
+
+@media screen and (max-width:576px) {
+    .adminlink-new-link-container {
+        width: 90%;
         margin: 20px;
     }
+
     .css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper {
-        width:90% !important;
+        width: 90% !important;
     }
-    .css-1t1j96h-MuiPaper-root-MuiDialog-paper{
-        width:90% !important;
+
+    .css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+        width: 90% !important;
     }
-    .adminlink-lists-container{
-        width:90%;
+
+    .adminlink-lists-container {
+        width: 90%;
         margin: 50px;
     }
-    .adminlink-list-switch-container{
+
+    .adminlink-list-switch-container {
         width: 50%;
     }
-    .adminappear-containers,.adminprofile-containers{
-        width:90%;
+
+    .adminappear-containers,
+    .adminprofile-containers {
+        width: 90%;
         margin: 30px auto;
         border-radius: 5px;
         padding: 15px;
     }
-    .adminappear-profile-pic-container{
+
+    .adminappear-profile-pic-container {
         width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
     }
-    .css-177ic5c{
+
+    .css-177ic5c {
         width: 90% !important;
         padding: 20px !important;
     }
+
+    .admininsight-container {
+        width: 100%;
+        height: auto;
+        margin: 50px auto;
+        flex-direction: column;
+        display: flex;
+    }
+    .admininsight-container-subpart {
+        width: 100%;
+        height: 250px;
+    }
+
+    .admininsight-container>div:first-child {
+        order: 2;
+    }
+
+    .admininsight-container>div:nth-child(2) {
+        order: 1;
+    }
+
+    .admininsight-container>div:nth-child(3) {
+        order: 3;
+    }
 }
+
 @media screen and (min-width:577px) and (max-width:991px) {
-    .adminlink-new-link-container{
-        width:70%;
+    .adminlink-new-link-container {
+        width: 70%;
         margin: 20px;
     }
+
     .css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper {
-        width:70% !important;
+        width: 70% !important;
     }
-    .css-1t1j96h-MuiPaper-root-MuiDialog-paper{
-        width:70% !important;
+
+    .css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+        width: 70% !important;
     }
-    .adminlink-lists-container{
-        width:70%;
+
+    .adminlink-lists-container {
+        width: 70%;
         margin: 50px;
     }
-    .adminlink-list-switch-container{
+
+    .adminlink-list-switch-container {
         width: 40%;
     }
-    .adminappear-containers,.adminprofile-containers{
-        width:70%;
+
+    .adminappear-containers,
+    .adminprofile-containers {
+        width: 70%;
         margin: 30px auto;
         border-radius: 5px;
         padding: 15px;
     }
-    .css-177ic5c{
+
+    .css-177ic5c {
         width: 70% !important;
         padding: 20px !important;
+    }
+    .admininsight-container{
+        width: 100%;
+        height: auto;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .admininsight-container-subpart{
+            width: 100%;
+            height: 200px;
+    }
+    .admininsight-container>div:first-child{
+        order: 2;
+    }
+    .admininsight-container>div:nth-child(2){
+        order: 1;
+    }
+    .admininsight-container>div:nth-child(3){
+        order: 3;
     }
 }

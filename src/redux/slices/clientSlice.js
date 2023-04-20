@@ -26,6 +26,11 @@ export const clientSlice=createSlice({
                 user:undefined
             }
         },
+        verifyUserRequest:(state,action)=>{
+            return{
+                ...state
+            }
+        },
         verifyUserSuccess:(state,action)=>{
             return{
                 ...state,
@@ -46,4 +51,4 @@ export const clientSlice=createSlice({
 })
 
 export default clientSlice.reducer;
-export const {clientDataRequest,clientDataSuccess,clientDataFail,verifyUserSuccess,verifyUserFail}=clientSlice.actions;
+export const {clientDataRequest,clientDataSuccess,clientDataFail,verifyUserSuccess,verifyUserFail,verifyUserRequest}=clientSlice.actions;

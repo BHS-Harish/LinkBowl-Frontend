@@ -4,6 +4,7 @@ import { Avatar, MenuItem } from '@mui/material';
 import { CgProfile } from 'react-icons/cg';
 import { MdOutlineLogout } from 'react-icons/md';
 import { RiShareForwardFill } from 'react-icons/ri';
+import {CgInsights} from 'react-icons/cg';
 import '../styles/Admin.css';
 import { Popover, QRCode } from 'antd';
 import logo from '../asset/lb-png.png';
@@ -12,6 +13,7 @@ import AdminLink from './AdminLink';
 import AdminApperances from './AdminApperances';
 import AdminPreview from './AdminPreview';
 import AdminProfile from './AdminProfile';
+import AdminInsight from './AdminInsight';
 import ErrorPage from '../components/ErrorPage';
 import Loader from '../components/Loader';
 import { logoutUser } from '../redux/actions/authActions';
@@ -60,6 +62,7 @@ function AdminMain() {
         return (
             <>
                 <Link to="profile" style={{ textDecoration: "none", color: "#000AFF" }}><MenuItem ><CgProfile style={{ margin: "auto 8px", fontSize: "18px" }} /> My Profile</MenuItem></Link>
+                <Link to="insight" style={{ textDecoration: "none", color: "#000AFF" }}><MenuItem ><CgInsights style={{ margin: "auto 8px", fontSize: "18px" }} /> Insight</MenuItem></Link>
                 <MenuItem style={{color:"#000AFF"}} onClick={() => {
                     dispatch(logoutUser());
                 }}><MdOutlineLogout style={{ margin: "auto 8px", fontSize: "18px" }} /> Logout</MenuItem>
@@ -108,6 +111,7 @@ function AdminMain() {
                             <Route path="appearances" element={<AdminApperances />} />
                             <Route path="preview" element={<AdminPreview />} />
                             <Route path="profile" element={<AdminProfile />} />
+                            <Route path="insight" element={<AdminInsight />} />
                             <Route path="*" element={<ErrorPage />} />
                         </Routes>
                     </>
